@@ -48,7 +48,7 @@
     return min*60 + sec;
   })
   // reduce to get total
-  .reduce( (secs, total) => {
+  .reduce( (total, secs) => {
     return total + secs;
   }, 0);
 
