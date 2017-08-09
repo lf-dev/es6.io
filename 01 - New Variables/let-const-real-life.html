@@ -11,8 +11,21 @@
     console.log(name);
   }
 
+  console.log('Solving with ES5 - IIFEs');
+  for(var i = 0; i < 10; i++) {
+    console.log(i);
+
+    (function(j) {
+      setTimeout(function() {
+        console.log('The number is ' + j);
+      },1000);
+    })(i);
+  }
+
+  console.log('Solving with ES6');
   for(let i = 0; i < 10; i++) {
     console.log(i);
+
     setTimeout(function() {
       console.log('The number is ' + i);
     },1000);
